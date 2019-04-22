@@ -1,0 +1,176 @@
+.xnav{
+    /* border-bottom: 1px solid #ddd; */
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 109;
+    top:0;
+    left: 0;
+    right: 0;
+transition: 0.2s ease-in;
+color: #203476;
+background: #fff;
+
+
+        ul.ul-nav{
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 90%;
+            margin: auto
+        }
+        ul.ul-nav li{
+            padding: 22px 20px;
+            font-size: 1em;
+        }
+        ul.ul-nav li:nth-child(1) {
+            font-family: ttbold !important;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            padding: 12px;
+        }
+        ul.ul-nav li:nth-child(2) {
+            font-family: ttbold !important;
+            margin-right: auto;
+            padding: 16px 20px 10px;
+
+        }
+        ul.ul-nav li:last-child {
+            padding: 12px 20px
+           
+        }
+        ul.ul-nav li.profile:last-child {
+            padding: 17px 20px
+           
+        }
+
+
+        ul.ul-nav  li a{
+        color: #555 !important;
+        font-size: 1em !important;
+        font-weight: 800 !important
+        }
+        
+        .navmodal a{
+            color: #f7f7f7 !important
+        }
+
+
+        .ui.basic.orange.button:hover{
+            background: #f26202 !important;
+            color:#eee !important
+        }
+        .ui.dropdown>.menu a{
+        color:  #555 !important;
+        padding: 15px 20px !important;
+        display: block;
+        font-size: 1em !important;
+        font-weight: 600 !important
+        }
+        .ui.dropdown>.menu{
+            min-width: 220px !important;
+            left: -400% !important;
+        }
+        .ui.dropdown .menu>.item{
+            padding: 0px !important
+        }
+        .ui.dropdown>.menu:after{
+            left: 15% !important;
+        }
+        .navmodal{
+            position:fixed;
+            height: 100%;
+            overflow-y: auto;
+            width: 100%;
+            top:0;
+            left: 0;
+            bottom: 0;
+            background:rgba(0, 0, 0, 0.9);
+            background-position: right;
+            z-index: 2000;
+            color:#f7f7f7;
+            padding: 50px 0px; 
+        }
+        .navmodal a{
+            color:#f7f7f7 !important;
+            margin-top: 12px;
+            font-size: 1.5em;
+            float: left;
+            padding-left: 5px;
+        }
+        .m-menu{
+            margin-right:-280px;
+            width: 70%;
+            overflow: hidden;
+            position: fixed;
+            z-index: 1026;
+            height: 100%;
+            background: #111;
+            right: 0;
+            top:0;
+            bottom:0;
+            transition: 0.3s ease-in;
+            background: #f8f8f8;
+            transition: 0.3s ease-in;
+            /* display: none; */
+        }
+        .m-menu .x-profile{
+            /* background-position: right; */
+            /* background:#ec3b5c; */
+            min-height: 100px !important;
+            padding: 30px 10px !important;
+            color: #fff;
+        }
+        .m-menu .x-profile img{
+            width: 100%;
+            border-radius: 100%;
+        }
+        .m-menu .x-profile a{
+            font-size: 1.2em;
+            color: #eee
+        }
+
+        .m-menu .links a{
+            background: #fff;
+            padding: 13px 15px;
+            font-family: open-sans;
+            display: block;
+            font-size: 0.95em;
+            /* font-weight: bolder */
+        }
+        .white-links a {
+            color:#fff !important
+        }
+        .m-menu .links a i{
+            margin-right: 10px
+        }
+        .xdimmer{
+            position: fixed;
+            width: 30%;
+            left: 0;
+            height: 100%;
+            background: rgba(29, 29, 29, 0.8);
+            z-index: 1020;
+            
+        }
+
+        .togglenav{
+            margin-right:0px;
+            display: block;
+            transition: 0.2s ease-in;
+        }
+        .subnav{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .subnav a{
+            padding:15px 20px;
+            display: inline-block;
+            color:#555 !important;
+            font-weight: 800
+        }
+        .brand-logo img{
+            width: 40px !important
+        }
+
+}

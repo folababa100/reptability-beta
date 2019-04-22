@@ -1,0 +1,83 @@
+
+.dashboard{
+
+
+    .xsetup{
+        .xstep{
+            margin-bottom: 50px !important;
+            text-align: center
+        }
+        .xstep .ui.label{
+            margin-right: 10px !important
+        }
+        .ui.form{
+            padding: 50px 30px;
+            box-shadow: 0 10px 30px #eee;
+        }
+        h4{
+            color: #555 !important
+        }
+        .ui.label{
+            font-size: 1em 
+        }
+        .ui.form .field>label{
+            font-size: 0.9em;
+            color: #555
+        }
+        .bottom-action{
+            margin: 50px 0px;
+        }
+    }
+}
+
+.x-links {
+    cursor: pointer;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.car-adjust {
+    font-size: 1.1em !important;
+    margin-left: 1rem !important;
+    color: #555;
+    margin-top: 0.1rem !important;
+}
+
+.distance {
+    margin-top: 30px;
+    font-weight: 600;
+    color: #548bf4;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.available-btn {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.av-round {
+    border-radius: 2rem !important;
+}
+
+.mr-02 {
+    margin-right: 0.3rem !important;
+}
+
+.ui.blue.basic.button.btn-hover.mr-02:hover {
+    background-color: #efefef !important;
+}
+
+.ui.blue.basic.button.active.mr-02 {
+    background-color: #eae7e7 !important;
+}
+
+// .ui.grid.x-tabs {
+//     display: none;
+// }

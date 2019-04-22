@@ -1,0 +1,312 @@
+
+.white {background:#fff}
+.light {background:#f8f9fa !important}
+.gray {background:#6c757d}
+.dark-grey{background: #343a40}
+.dark {background:#343a40}
+
+@font-face{
+    font-family: tt;
+    src:url('../fonts/typetype_-_tt_norms_regular-webfont.woff2')
+    
+}
+@font-face{
+    font-family: ttbold;
+    src:url('../fonts/typetype_-_tt_norms_bold-webfont.woff2');
+    
+}
+@font-face{
+    font-family: ttmedium;
+    src:url('../fonts/typetype_-_tt_norms_medium-webfont.woff2');
+}
+html{
+    -webkit-font-smoothing:antialiased
+}
+body{
+    font-family: tt !important
+}
+.tt{
+    font-family: tt !important;
+}
+.ttmedium{
+    font-family: ttmedium !important
+}
+.ttbold{
+    font-family: ttbold !important;
+}
+.blue-color{
+color: #203476 !important
+}
+.darkblue-color{
+    color: #182c50 !important
+}
+.shadowed{
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.1) !important;
+    transition: 0.2s ease-in;
+}
+.xcontainer{
+    width: 90% !important;
+    margin: auto !important;
+}
+.epistle{
+    font-size: 1.3em;
+    font-family: ttmedium;
+    line-height: 30px
+}
+.epistle2{
+    font-size: 1.2em;
+    font-family: tt;
+}
+.flex-justify{
+    display: flex !important;
+    justify-content: center !important;
+    align-items:  center !important;
+}
+.bottom-line{
+    width:  0%;
+    margin: auto;
+    height: 3px;
+    background: #fff;
+    transition: 0.2s ease-in
+
+}
+
+.grid-change {
+    margin-top: 2rem !important;
+}
+
+.animate-loader{
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+}
+.custom-icon{
+    cursor: default;
+    position: absolute;
+    line-height: 1;
+    text-align: center;
+    top: 30%;
+    right: 0;
+    margin: 0;
+    height: 100%;
+    width: 2.67142857em;
+    opacity: .5;
+    border-radius: 0 .28571429rem .28571429rem 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+.home .fifth-section, .electrical .fifth-section,
+.about .fifth-section, .contact .fifth-section{
+    margin: 100px 0px;
+    padding: 100px 10px;
+    background: url("../images/features_IMG_sparkle@2x.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.tos .first-section{
+    padding: 120px 10px;
+    position: relative;
+    background: #00d0b4;
+}
+.tos .second-section{
+    padding: 100px 0px;
+    color: #555;
+}
+.tos .second-section h2{
+    font-size: 2.2em;
+}
+.tos .second-section .xtitle{
+    margin: 20px 0px 10px;
+    font-size: 1.7em;
+    font-weight:400
+}
+
+.btn-blue {
+    border-radius: 2rem !important;
+}
+
+.footer-form {
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid !important;
+}
+
+.bolder {
+    font-weight: 600 !important;
+}
+
+/* .ui.blue.button, .ui.blue.buttons .button:hover{
+    border: 1px solid #3c66dc !important;
+    background: linear-gradient(180deg,#5078ee,#3c66dc) !important;
+    box-shadow: 0 1px 0 0 rgba(22,29,37,.05) !important;
+} */
+
+
+footer{
+    /* padding: 20px 40px; */
+    margin-top: 100px;
+    background : #fff;
+    color:#555;
+    border-top:1px solid #ddd
+}
+footer .main-footer .title{
+    font-family: ttmedium;
+    font-weight:800;
+    text-transform: uppercase
+}
+footer a{
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: lighter;
+    color: #555 !important;
+}
+
+footer .main-footer{
+    padding: 60px 0px !important;
+}
+footer .top-footer{
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
+
+footer .copyright{
+    padding: 20px 0px
+}
+
+footer a:hover{
+    color: #222 !important;
+    transition: 0.1s ease-in;
+    /* font-size: 0.9em; */
+}
+footer button.ask{
+    color:#999 !important;
+    background: transparent !important;
+    border: 1px solid #999 !important
+}
+footer .ui.accordion .accordion .title, .ui.accordion .title{
+    color: #fff !important
+}
+
+.big-font {
+    font-size: 2rem !important;
+}
+
+@media (min-width: 769px) {
+    .footer-adjust {
+        display: flex !important;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width:769px){
+    .ui.container{
+        margin-left: 0.5em !important;
+        margin-right: 0.5em !important;
+    }
+    .xcontainer{
+        width: unset !important
+    }
+    .home .first-section h1, .electrical .first-section h1,.about  .first-section h1, .tos .first-section h1,.contact .first-section h1{
+        font-size: 2em !important;
+        text-transform: capitalize !important
+    }
+     h2{
+        font-size: 1.5em !important
+    }
+    .home .ui.tiny.action.input{
+        width: 100% !important
+    }
+    .home .first-section ,.contact .first-section{
+    padding: 100px 0px;
+    margin-top:50px;
+    background-position-x: left;
+    text-align: center;
+    }
+   
+     .epistle, .epistle2{
+        font-size: 1.1em !important
+    }
+    footer .main-footer{
+        padding: 20px !important;
+    }
+    footer .copyright{
+        padding: 20px 10px
+    }
+    footer div{
+        border-top: unset !important
+    }
+    footer .top-footer{
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    footer a{
+        font-size: 1em !important
+    }
+    footer .title{
+        margin-top: 20px !important
+    }
+    .slick-arrow.slick-prev, .slick-arrow.slick-next{
+        margin: 0px 20px;
+    }
+    
+    a.modal-link.none-link {
+        display: none !important;
+    }
+   
+    .no-xspad,.ui.container.no-xspad{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .no-xspadding{
+        padding: 0px !important
+    }
+    .xnav ul.ul-nav li:nth-child(1){
+        padding:25px 0px !important 
+    }
+    .navmodal{
+        width: 100%;
+        padding: 25px 0px
+    }
+    a.modal-link{
+        font-size: 1.1em !important;
+        padding: 0px !important;
+        margin-bottom: 30px !important;
+        display: block !important
+    }
+    .navmodal .title{
+        font-size: 1.1em !important;
+        margin-bottom: 15px !important
+    }
+    .navmodal i{
+        float: unset;
+    }
+    .navmodal button{
+        float: unset !important;
+        font-size: 1em !important
+    }
+    .navmodal a{
+        float: unset !important;
+        font-size: 1em;
+        display: block;
+        font-weight: bolder !important
+    }
+    button.close-nav{
+        position: fixed;
+        left: 57%;
+        top: 25px;
+        z-index: 10;
+    }
+   
+    .hide-xs{
+        display: none !important
+    }
+    
+}

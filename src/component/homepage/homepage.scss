@@ -1,0 +1,40 @@
+.home {
+
+    .first-section{
+        background: #203476;
+        padding: 200px 10px;
+        position: relative;
+        background: #203476 url("/images/0006_sushi_190104_230929.png");
+
+        .ui.input{
+            width: 100%
+        }
+         h1,.electrical .first-section h1,.about .first-section h1{
+            font-size: 2.8em ;
+        }
+    }
+
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.mt-two {
+    margin-top: 1.5rem;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.txt-home {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.btn-home {
+    border-radius: 2rem !important;
+}

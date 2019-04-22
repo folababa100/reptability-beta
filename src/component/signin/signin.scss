@@ -1,0 +1,67 @@
+@import "../../shared.scss";
+$back-home: linear-gradient(135deg, #0f94e0, #697dcc);
+$color: #737373;
+$background-color: #2c8dda;
+$color-text: #f9f9f9;
+$backg: #f0f0f0;
+$input-color: #797979;
+$button-home: #8bc34a;
+
+.signin-card {
+    margin-top: 82px;
+
+
+  .ui.button.sign-up-button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+  }
+.ui.button.signup-page-btn {
+    background-color: $background-color;
+  }
+  
+  .ui.button.signup-page-btn:hover, .ui.button.signup-page-btn:focus {
+    background-color: $background-color;
+  }
+  
+  ::placeholder {
+  }
+  
+  .fielder>a:hover {
+    text-decoration: underline;
+  }
+
+button.ui.button.employer-choose {
+    border-top-left-radius: 2rem !important;
+    border-bottom-left-radius: 2rem !important;
+  }
+  
+  button.ui.button.worker-choose {
+    border-top-right-radius: 2rem !important;
+    border-bottom-right-radius: 2rem !important;
+  }
+  
+  .btn-choose {
+    background-color: white !important;
+    box-shadow: 1px 1px 2px 0px #8c8c8c !important;
+    border: 1px solid #c3c3c3 !important;
+  }
+  
+  // .btn-choose:hover {
+  //   background-color: $background-color !important;
+  //   color: $color-text !important;
+  //   box-shadow: 1px 1px 2px 0px #cacaca !important;
+  //   border: 1px solid #c5c5c5 !important;
+  // }
+ 
+
+.link-to-other {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .link-to-other>a:hover {
+    text-decoration: underline;
+  }
+  }
