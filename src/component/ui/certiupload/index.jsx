@@ -1,10 +1,12 @@
+
+
 import React,{Component} from "react"
 import apiUrl from '../../../config';
 import ReactDropzone from 'react-dropzone';
 import { Icon, Segment, Image, Grid, Form } from "semantic-ui-react";
 import axios from "axios"
-import "./cvuploader.scss"
-export default class Uploadcv extends Component{
+import "../cvuploader/cvuploader.scss"
+export default class Certiupload extends Component{
  constructor(props){
    super(props)
    this.state={
@@ -29,14 +31,15 @@ export default class Uploadcv extends Component{
        files.forEach(file => {
         var formData = new FormData();
         formData.append("file", file);
-        axios.post(`${apiUrl}/api/uploadFile`, formData, {
+        axios.post(`${apiUrl}/api/uploadCerti`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
         }).then((res)=>{
             console.log(res)
-            if(res.data.file){
+            if(res.data.item){
                     this.setState({isLoading:false,success:true})
+                    this.props.addImage(res.data.item)
                 }
         })
     })
@@ -52,14 +55,12 @@ export default class Uploadcv extends Component{
         <Grid.Column ></Grid.Column>
         { this.state.files.map((file) => (
                <Grid.Column >
-                <div style={{ textAlign: 'center' }}>
-                  <Icon name="file pdf outline" size="huge"/>
-                  {this.state.success === true && this.state.isLoading === false ? (
-                    <p>CV upload was a success</p>
-                  ) : (
-                    <p>Drag or Drop to upload Resume</p>
-                  )}
-                </div>
+               <Image
+              alt="Preview"
+              key={file.preview}
+              src={file.preview}
+              size="small"
+            />
                </Grid.Column>
           ))
         }
@@ -76,8 +77,8 @@ export default class Uploadcv extends Component{
             <div className="imageupload2" {...getRootProps()}>
               <input {...getInputProps()} />
                 <div style={{ textAlign: "center"  }}>
-                    <Icon name="file pdf outline" size="huge"/>
-                    <p>Drag or Drop to upload Resume</p>
+                    <Icon name="image outline" size="huge"/>
+                    <p>Drag or Drop to upload Certificate</p>
                 </div>
             </div>
           )}

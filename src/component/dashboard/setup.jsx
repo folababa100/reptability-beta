@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
-import { Form, Grid, Label, Icon } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 import Uploadcv from '../ui/cvuploader';
-import Tabes from './tabes';
 import DatePicker from "react-datepicker";
 import apiUrl from "../../config.js"
 import axios from 'axios';
@@ -14,7 +13,7 @@ const options = [
     { key: 'f', text: 'Female', value: 'female' },
   ]
   
-export default class Setup extends Component{
+class Setup extends Component{
     constructor(props) {
         super(props);
         this.state  = {
@@ -68,3 +67,5 @@ export default class Setup extends Component{
         )
     }
 }
+
+export default Setup;

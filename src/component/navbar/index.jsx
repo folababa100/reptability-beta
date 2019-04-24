@@ -70,7 +70,7 @@ export default class Navbar extends Component{
                 <li><Link to="/" className="brand-logo"> <Image src={`${process.env.PUBLIC_URL}/images/Reptability123.png`} size="tiny"/></Link> </li>
                 <li><Search size="small" placeholder="search for workers"/> </li>
                 <li><Link to="/signin">Log in</Link> </li>
-                <li><Link to="/signup">Sign up</Link></li>
+                <li><Link to="/signup/employer">Sign up</Link></li>
                 <li><Button  color="blue" circular  content="Post a Job" style={{paddingLeft:"50px",paddingRight:"50px"}}/></li>
             </ul>}
             </Responsive>

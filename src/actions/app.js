@@ -25,3 +25,15 @@ export const addSetThree = (data) => {
     payload: data
   }
 }
+
+// export const addSkills = (data) => {
+//   return {
+//     type: "ADD_SKILLS_SET",
+//     payload: data
+//   }
+// }
+
+export const addSkills = (workExperience) => ({
+  type: 'ADD_SKILLS_SET',
+  workExperience
+});

@@ -42,7 +42,7 @@ export default class Tabes extends Component {
           </Grid.Column>
           <Grid.Column>
             <Label className="x-links" circular color="grey">4</Label>
-            Job Type
+            Education & Job type
           </Grid.Column>
           </Grid.Row>
       </Grid>

@@ -11,7 +11,7 @@ const initialState = {
   provinceState: '',
   cityTown: '',
   values: [0],
-  workExperience: []
+  workExperiences: []
 }
 
 export default function App (state = initialState, action) {
@@ -22,13 +22,14 @@ export default function App (state = initialState, action) {
       return newState;
       break;
     case "ADD_WORK_EXPERIENCE":
-      let newState = Object.assign({}, state);
       newState.workExperience.push(action.payload)
       return newState
       break;
-    case "ADD_SKILLS":
-      let newsTate = Object.assign({}, state);
-      newsTate.skills.push(action.payload)
+    case "ADD_SKILLS_SET":
+      return [
+        ...state.workExperiences,
+        action.workExperience
+      ]
       break;
     default:
       return state;

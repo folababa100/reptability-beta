@@ -28,6 +28,10 @@
             margin: 50px 0px;
         }
     }
+
+    .ui.form .fields>.field {
+        width: 100% !important;
+    }
 }
 
 .x-links {
@@ -81,3 +85,21 @@
 // .ui.grid.x-tabs {
 //     display: none;
 // }
+
+.span-adjust {
+    margin: auto;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker__input-container {
+    width: 100%;
+    padding-left: 0.4rem;
+    padding-right: 0.5rem;
+}
+
+.default.text {
+    color: #555 !important;
+}

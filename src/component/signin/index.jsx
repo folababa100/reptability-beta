@@ -26,9 +26,6 @@ import Glogin from '../ui/sociallogin/googleLogin';
     this.login = this.login.bind(this)
     this.typing = this.typing.bind(this)
 }
-componentWillMount() {
-   
-}
 login(e) {
     e.preventDefault();
     this.setState({ isLoading: true, error:"" })
