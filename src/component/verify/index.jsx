@@ -14,7 +14,7 @@ export default class Verify extends Component {
     axios.post(`${apiUrl}/api/verify`, token).then((res) => {
       console.log(res)
       if(res.data.success === true) {
-        return <Redirect/>
+        return <Redirect to="/dashboard"/>
       }
     }).catch((e) => {
       console.log(e)

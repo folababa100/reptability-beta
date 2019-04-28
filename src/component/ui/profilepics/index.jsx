@@ -31,15 +31,14 @@ export default class Profilepics extends Component{
        files.forEach(file => {
         var formData = new FormData();
         formData.append("file", file);
-        axios.post(`${apiUrl}/api/uploadProfilePics`, formData, {
+        axios.post(`${apiUrl}/api/uploadFile`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
         }).then((res)=>{
             console.log(res)
-            if(res.data.item){
+            if(res.data.file){
                     this.setState({isLoading:false,success:true})
-                    this.props.addImage(res.data.item)
                 }
         })
     })
@@ -55,12 +54,14 @@ export default class Profilepics extends Component{
         <Grid.Column ></Grid.Column>
         { this.state.files.map((file) => (
                <Grid.Column >
-               <Image
-              alt="Preview"
-              key={file.preview}
-              src={file.preview}
-              size="small"
-            />
+                <div style={{ textAlign: 'center' }}>
+                  <Icon name="file pdf outline" size="huge"/>
+                  {this.state.success === true && this.state.isLoading === false ? (
+                    <p>Profile picture upload was a success</p>
+                  ) : (
+                    <p>Drag or Drop to upload profile picture</p>
+                  )}
+                </div>
                </Grid.Column>
           ))
         }
@@ -69,7 +70,7 @@ export default class Profilepics extends Component{
         :
         <ReactDropzone
             multiple={false}
-           accept="image*"
+           accept="image/*"
            onDrop={this.onDrop}
            name="item"
         >
@@ -78,7 +79,7 @@ export default class Profilepics extends Component{
               <input {...getInputProps()} />
                 <div style={{ textAlign: "center"  }}>
                     <Icon name="image outline" size="huge"/>
-                    <p>Drag or Drop to upload Your profile picture</p>
+                    <p>Drag or Drop to upload profile picture</p>
                 </div>
             </div>
           )}

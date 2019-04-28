@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { Popup ,Button, Grid,Embed,Header,Dimmer,GridColumn, Icon, Divider, Image, Input, Select, Form, Card, Responsive} from 'semantic-ui-react';
+import { Popup, Button, Grid, Embed, Header, Dimmer, GridColumn, Icon, Divider, Image, Input, Select, Form, Card, Responsive } from 'semantic-ui-react';
 import Tabes from './tabes'
+import { optionsTime, STEP, MIN, MAX, options } from './optionTime';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 export default class Setupthird extends Component {
@@ -20,7 +23,8 @@ export default class Setupthird extends Component {
       thur: '',
       fri: '',
       sat: '',
-      sun: ''
+      sun: '',
+      birthDay: new Date()
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleClick1 = this.handleClick1.bind(this)
@@ -53,15 +57,16 @@ export default class Setupthird extends Component {
     this.setState({ active6: !this.state.active6 })
   }
   typing(e, data) {
-    var name= data.name;
+    var name = data.name;
     this.setState({
       [name]: data.value
     })
   }
   render() {
     return (
-            <Form style={{ backgroundColor: 'white' }} size="large">
-              <p className="text-center bolder">Add multiple day and time to show you are always avalaible</p>
+      <div>
+        <Form style={{ backgroundColor: 'white' }} size="large">
+          {/* <p className="text-center bolder">Add multiple day and time to show you are always avalaible</p>
               <Form.Group style={{ display: 'flex', justifyContent: 'center' }} widths='equal'>
                 <Button.Group>
                   <Button name={this.state.active === true ? 'mon' : ''} toggle active={this.state.active} onClick={this.handleClick} className="btn-hover mr-02" basic color="blue">MON</Button>
@@ -73,11 +78,27 @@ export default class Setupthird extends Component {
                   <Button name={this.state.active6 === true ? 'sun' : ''} toggle active={this.state.active6} onClick={this.handleClick6} className="btn-hover mr-02" basic color="blue">SUN</Button>
                 </Button.Group>
               </Form.Group>
+              <Form.Group>
+                <Form.Select style={{ width: '100%' }} name="workTime1" onChange={this.typing} options={optionsTime} placeholder="Available Time" />
+                <span className="span-adjust">to</span>
+                <Form.Select style={{ width: '100%' }} name="workTime2" onChange={this.typing} options={optionsTime} placeholder="Available Time" />
+              </Form.Group>
               <div className="available-btn">
                 <Button color="blue" className="av-round">Add Avalability</Button>
-              </div>
-                
-            </Form>
+              </div> */}
+          <Form.Group widths="equal">
+            <Form.Select name="gender" onChange={this.typing} options={options} placeholder='Gender' />
+          </Form.Group>
+          <Form.Group widths="equal">
+            <DatePicker
+              selected={this.state.birthDay}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+        </Form>
+        <p className="level-steps">3 of 10</p>
+      </div>
+
     )
   }
 }

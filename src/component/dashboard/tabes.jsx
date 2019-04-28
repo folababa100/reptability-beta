@@ -16,35 +16,65 @@ export default class Tabes extends Component {
   //   document.getElementById(ctyName).style.display = "block !important";
 
   //   event.currentTarget.className += " active";
-    
+
   // }
   // componetWillMount() {
   //   document.getElementById('defaultOpen').click()
   // }
+  onProfileSet() {
+    this.setState({
+        show: true,
+        show1: false,
+        show2: false,
+        show3: false
+    })
+}
+onLocationSet() {
+    this.setState({
+        show: false,
+        show1: true,
+        show2: false,
+        show3: false
+    })
+}
+onAvailabilitySet() {
+    this.setState({
+        show: false,
+        show1: false,
+        show2: true,
+        show3: false
+    })
+}
+onJobTypeSet() {
+    this.setState({
+        show: false,
+        show1: false,
+        show2: false,
+        show3: true
+    })
+}
   render() {
+    
     return (
       <Grid columns="4">
         <Grid.Row className="xstep">
           <Grid.Column>
-            {/* eslint-disable-next-line */}
-            <Label id="defaultOpen" className="x-links" circular color="blue" >1</Label>
+            <Label onClick={this.onProfileSet} id="defaultOpen" className="x-links" circular color={this.state.show === true ? "blue" : "grey"} >1</Label>
             Profile
-          </Grid.Column>
+                                </Grid.Column>
           <Grid.Column>
-            {/* eslint-disable-next-line */}
-            <Label className="x-links" circular color="grey" >2</Label>
+            <Label onClick={this.onLocationSet} className="x-links" circular color={this.state.show1 === true ? "blue" : "grey"} >2</Label>
             Location
-          </Grid.Column>
+                                </Grid.Column>
           <Grid.Column>
-            {/* eslint-disable-next-line */}
-            <Label className="x-links" circular color="grey" >3</Label> 
+            <Label onClick={this.onAvailabilitySet} className="x-links" circular color={this.state.show2 === true ? "blue" : "grey"} >3</Label>
             Availability
-          </Grid.Column>
+                                </Grid.Column>
           <Grid.Column>
-            <Label className="x-links" circular color="grey">4</Label>
-            Education & Job type
-          </Grid.Column>
-          </Grid.Row>
+            <Label onClick={this.onJobTypeSet} className="x-links" circular color={this.state.show3 === true ? "blue" : "grey"}>4</Label>
+            Job Type
+                                </Grid.Column>
+        </Grid.Row>
       </Grid>
     )
   }

@@ -48,9 +48,10 @@ export default class Glogin extends Component{
         <GoogleLogin 
         render={renderProps => (
         <Button color="google plus" 
-        size="large"
+        size="huge"
+        style={{ width: '100%' }}
         onClick={renderProps.onClick}
-            ><Icon name="google plus" /> Google</Button>
+            ><Icon name="google plus" />              Continue with Google</Button>
         )}
         clientId="494659809733-gc73dt5l9f3bmodml1crt73she8rvtaf.apps.googleusercontent.com"
         buttonText="Login"

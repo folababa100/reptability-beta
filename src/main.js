@@ -11,6 +11,7 @@ import Confirm from './component/confirm'
 import Privateroute from './container/privateroute';
 import Signupwork from './component/signup/signupwork';
 import Verify from './component/verify';
+import Adminpanel from './component/adminpanel';
 // import Howitworks from './component/home/howitworks';
 // import about from './component/home/about';
 // import privacy from './component/home/privacy';
@@ -46,7 +47,8 @@ class App extends Component {
                     <Route exact={true} path="/signup/worker" component={Signupwork} />
                     <Privateroute exact={true} path="/confirm" component={Confirm}/>
                     <Privateroute path="/verify" component={Verify}/>
-                    <Privateroute exact path="/dashboard" component={Dashboard} />
+                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route exact={true} path="/admin/dashboard" component={Adminpanel} />
                     {/* <Route exact path="/how_it_works" component={Howitworks} />
                     <Route exact path="/about" component={about} />
                     <Route exact path="/tos" component={tos} />

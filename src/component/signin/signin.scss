@@ -8,7 +8,7 @@ $input-color: #797979;
 $button-home: #8bc34a;
 
 .signin-card {
-    margin-top: 82px;
+    margin-top: 45px;
 
 
   .ui.button.sign-up-button {
@@ -65,3 +65,9 @@ button.ui.button.employer-choose {
     text-decoration: underline;
   }
   }
+
+.fielder {
+  display: flex;
+  justify-content: space-between;
+}
+  

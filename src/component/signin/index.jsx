@@ -90,11 +90,11 @@ typing(e,data) {
                   
                     <Divider horizontal>OR</Divider>
                         <Form.Field>
-                      <Input className="mt-2 max-width" size="huge" placeholder='Email Address' type="email" name="email" onChange={this.typing}/>
+                          <Input className="mt-2 max-width" size="huge" placeholder='Email Address' type="email" name="email" onChange={this.typing}/>
                         </Form.Field>
                         <Form.Field>
 
-                      <Input className="mt-2 max-width" size="huge" type="password" placeholder='Password' iconPosition="right" name="password" onChange={this.typing}>
+                          <Input className="mt-2 max-width" size="huge" type="password" placeholder='Password' iconPosition="right" name="password" onChange={this.typing}>
                         {
                           this.state.show === false ? (
                             <input type="password" />
@@ -114,7 +114,7 @@ typing(e,data) {
                       </Form.Field>
 
                       <Form.Field className="fielder">
-                        {/* <Checkbox label='Remember Me' /> */}
+                        <Checkbox label='Remember Me' />
                         <Link>Forgot Password?</Link>
                       </Form.Field>
                       <Form.Field>

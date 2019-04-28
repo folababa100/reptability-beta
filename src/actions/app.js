@@ -1,3 +1,5 @@
+import uuid from 'uuid';
+
 export const addSetUp = (data) => {
   return {
     type: "ADD_SET_UP",
@@ -26,14 +28,35 @@ export const addSetThree = (data) => {
   }
 }
 
-// export const addSkills = (data) => {
-//   return {
-//     type: "ADD_SKILLS_SET",
-//     payload: data
-//   }
-// }
+export const addSkill = (
+  {
+  skill = ''
+  } = {}
+) => ({
+    type: "ADD_SKILL_SET",
+    skill: {
+      id: uuid(),
+      skill
+    }
+  }
+)
 
-export const addSkills = (workExperience) => ({
+export const addSkills = (
+  {
+    employer = '',
+    title = '',
+    start = 0,
+    end = 0,
+    responsibility = ''
+  } = {}
+) => ({
   type: 'ADD_SKILLS_SET',
-  workExperience
+  workExperience: {
+    id: uuid(),
+    employer,
+    title,
+    start,
+    end,
+    responsibility
+  }
 });

@@ -31,6 +31,11 @@ export default function App (state = initialState, action) {
         action.workExperience
       ]
       break;
+    case "ADD_SKILL_SET":
+      return [
+        ...state.skills,
+        action.skill
+      ]
     default:
       return state;
       break;

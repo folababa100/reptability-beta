@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import { Form } from 'semantic-ui-react'
 import Uploadcv from '../ui/cvuploader';
-import DatePicker from "react-datepicker";
 import apiUrl from "../../config.js"
 import axios from 'axios';
  
@@ -48,22 +47,12 @@ class Setup extends Component{
     }
     render(){
         return(
-            <Form style={{ backgroundColor: 'white' }} size="large">
-                <Form.Group widths='equal'>
-                    <Form.Input name="firstname" onChange={this.typing} fluid label='First name'   />
-                    <Form.Input name="lastname" onChange={this.typing}   fluid label='Last name'/>
-                </Form.Group>
-                <Form.Group widths="equal">
-                    <Form.Input name="postalCode" onChange={this.typing} type="number" fluid label="Postal Code"/>
-                    <Form.Input name="phoneNumber" onChange={this.typing} type="number" fluid label="Phone Number"/>
-                </Form.Group>
-                <Form.Select name="gender" onChange={this.typing} options={options} placeholder='Gender'  />
-                <DatePicker
-                    selected={this.state.birthDay}
-                    onChange={this.handleChange}
-                />
-                <Uploadcv />
-            </Form>
+            <div>
+                <Form style={{ backgroundColor: 'white' }} size="large">
+                    <Uploadcv />
+                </Form>
+                <p className="level-steps">1 of 10</p>
+            </div>
         )
     }
 }

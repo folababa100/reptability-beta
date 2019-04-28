@@ -55,8 +55,8 @@ export default class Fblogin extends Component {
           onError={this.handleError}
         >
           {({ loading, handleClick, error, data }) => (
-             <Button disabled={loading} onClick={(e)=>this.click(e,handleClick)} color='facebook' size="large">
-             <Icon style={{ color: '#fff' }} name='facebook' />  Facebook
+             <Button style={{ marginBottom: '1rem', width: '100%' }} disabled={loading} onClick={(e)=>this.click(e,handleClick)} color='facebook' size="huge">
+             <Icon style={{ color: '#fff' }} name='facebook' />           Continue with Facebook
            </Button>
           )}
         </Login>

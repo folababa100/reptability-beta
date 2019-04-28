@@ -32,6 +32,19 @@
     .ui.form .fields>.field {
         width: 100% !important;
     }
+    .fields {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ui.form .fields>.field:first-child.skills-set {
+        width: 50% !important;
+        margin-top: 1rem;
+    }
+
+    [name=skill] {
+        border: none !important;
+    }
 }
 
 .x-links {
@@ -102,4 +115,15 @@
 
 .default.text {
     color: #555 !important;
+}
+
+.fields {
+    display: flex;
+    justify-content: center;
+}
+
+.level-steps {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 700;
 }
