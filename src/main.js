@@ -12,9 +12,10 @@ import Privateroute from './container/privateroute';
 import Signupwork from './component/signup/signupwork';
 import Verify from './component/verify';
 import Adminpanel from './component/adminpanel';
+import Employersignup from './component/employerSignup';
 // import Howitworks from './component/home/howitworks';
 // import about from './component/home/about';
-// import privacy from './component/home/privacy';
+import privacy from './component/home/privacy';
 // import tos from './component/home/tos';
 // import HomePage from './component/homepage';
 class App extends Component {
@@ -49,6 +50,8 @@ class App extends Component {
                     <Privateroute path="/verify" component={Verify}/>
                     <Route exact path="/dashboard" component={Dashboard} />
                     <Route exact={true} path="/admin/dashboard" component={Adminpanel} />
+                    <Route exact={true} path="/signup/employers" component={Employersignup}/>
+                    <Route exact={true} path="/privacy" component={privacy}/>
                     {/* <Route exact path="/how_it_works" component={Howitworks} />
                     <Route exact path="/about" component={about} />
                     <Route exact path="/tos" component={tos} />

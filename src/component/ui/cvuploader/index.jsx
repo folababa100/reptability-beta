@@ -45,7 +45,7 @@ export default class Uploadcv extends Component{
 
   render() {
     return (
-        <div style={{ marginTop: '1rem' }} className="uploadcv" loading={this.state.isLoading}>
+        <div style={{ marginTop: '1rem', border: 'none' }} className="uploadcv" loading={this.state.isLoading}>
            {this.state.files.length ?
            
         <Grid columns="3">
@@ -76,8 +76,13 @@ export default class Uploadcv extends Component{
             <div className="imageupload2" {...getRootProps()}>
               <input {...getInputProps()} />
                 <div style={{ textAlign: "center"  }}>
-                    <Icon name="file pdf outline" size="huge"/>
-                    <p>Drag or Drop to upload Resume</p>
+                    
+                    <p style={{ fontSize: '1.5rem', fontWeight: '600' }}>Upload Resume</p>
+                    <p style={{ fontSize: '1.2rem', fontWeight: '600', color: '#aab7c1' }}>Attach your profile to make your resume standout.</p>
+                    <p style={{ fontSize: '1.1rem', fontWeight: '600', color: '#aab7c1', fontStyle: 'italic' }}>Only pdf files allowed</p>
+                    <p style={{ fontSize: '1.2rem', fontWeight: '600', color: '#309bbb', marginTop: '2rem', marginBottom: '13rem' }}>Upload</p>
+                    <p style={{ fontWeight: '600', color: '#aab7c1' }}>If you don't have a resume, Reptability will generate one for you based on your answers. You can save it and send it to yourself to keep</p>
+                    <p style={{ fontSize: '1.3rem', fontWeight: '600', color: '#309bbb' }}>View generated resume</p>
                 </div>
             </div>
           )}

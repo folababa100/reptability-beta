@@ -5,9 +5,6 @@ import Navbar from "../navbar";
 import {connect} from "react-redux"
 import {Link} from "react-router-dom"
 import Particles from "react-particles-js";
-import "react-typist/dist/Typist.css"
-import Contactform from "../forms/contact";
-import Servicepartner from "../ui/servicepartner";
 function mapStateToProps(state){
     return {auth: state.auth}
 }
@@ -45,7 +42,7 @@ function mapStateToProps(state){
                             </Grid.Column>
                             <Grid.Column computer="8" tablet="8" mobile="16" className="flex-justify">
                               <div>
-                              <h1 className="ttbold darkblue-color">PRIVACY POLICY</h1>
+                              <h1 className="ttbold darkblue-color">TERMS OF SERVICE</h1>
                                 <p className="epistle tt blue-color">
                                 To exercise any of your rights in connection with your personal information, we kindly ask that you open a Customer Relations ticket. Please include all the relevant details, so your ticket can be handled correctly
                                 </p>
@@ -63,7 +60,7 @@ function mapStateToProps(state){
                             <Grid.Row >
                             <Grid.Column > </Grid.Column>
                             <Grid.Column computer="14" tablet="14" mobile="16">
-                              <h2 >Privacy Policy</h2>
+                              <h2 >Terms of service</h2>
                               <p className="epistle2">
                               Please read this privacy policy (the “Policy”) carefully to understand how we use your personal information. If you do not agree with this Policy, your choice is not to use Fiverr.com (the “Site”). By accessing or using this Site, you agree to this Policy. This Policy may change from time to time. If there are any material changes to how your personal information is used, we will notify you. Your continued use of the Site after we make changes is deemed to be acceptance of those changes, so please check the Policy periodically for update.
                               </p>
@@ -75,18 +72,18 @@ function mapStateToProps(state){
                                 <Grid.Column computer="14" tablet="14" mobile="16">
                               <p className="xtitle">PERSONAL INFORMATION</p>
                               <p className="epistle2"> 
-                              Consumer: During the Account registration process and during your usage of Mistri Mama’s website, we will collect information such as your name, postal code, telephone email address and other personal information.
+                              Consumer: During the Account registration process and during your usage of Reptability website, we will collect information such as your name, postal code, telephone email address and other personal information.
 
 
                                  </p>
                               <p className="epistle2">
-                              Electric Service Providers: If and when they create and use an account with Mistri Mama, will be required to disclose and provide information to Mistri Mama including personal contact details, bank details, personal identification details and participate in polls or surveys or feedbacks etc.
+                              Freelance platform: If and when they create and use an account with Reptability, will be required to disclose and provide information to Reptability including personal contact details, bank details, personal identification details and participate in polls or surveys or feedbacks etc.
                                 We may also collect personal information that you post in your Offer, Profile, Wants, or Feedback, and any comments or discussions you post in any blog, chat room, or other correspondence site on the Website or mobile application, or any comments you provide during dispute resolution with other users of the Website or mobile application.
                                 Such Personal Information may include your personal identifiable information such as your name, address, mobile number, your e-mail ids, your age, IP address, payment details and any other personal information which you may share in connection with the services.
-                                This information is partially or completely accessible to all visitors using Mistri Mama’s website, either directly or by submitting a request for a service.
-                                At the time of using the Mistri Mama Service you will share certain Personal Information with Mistri Mama, Mistri Mama respects your Personal Information.
+                                This information is partially or completely accessible to all visitors using Reptability, either directly or by submitting a request for a service.
+                                At the time of using the Reptability Service you will share certain Personal Information with Reptability, Reptability respects your Personal Information.
                                 "Personal information" is defined to include information that whether on its own or in combination with other information may be used to readily identify or contact you such as: name, address, email address, phone number etc.
-                                Mistri Mama is owner and operator of this Website. Collectively, including all content provided by Mistri Mama through Website you do not to have right to supply personally identifiable information.
+                                Reptability is owner and operator of this Website. Collectively, including all content provided by Reptability through Website you do not to have right to supply personally identifiable information.
                                 Service Professionals and customers are required to create an account to be able to access certain portions of our Website, such as to submit questions, participate in polls or surveys, to request a quote, to submit a bid in response to a quote, and request information.
                                 
                               </p>

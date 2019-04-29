@@ -292,7 +292,7 @@ import Setupten from "./setupten";
         // const deta
         return(
             <div className="white dashboard">
-                {/* <Navbar {...this.props}/> */}
+                <Navbar {...this.props}/>
                 <Grid id="profile" columns="equal" className="x-tabs xsetup">
                     <Grid.Row>
                         <Grid.Column></Grid.Column>
@@ -349,4 +349,8 @@ import Setupten from "./setupten";
     }
 }
 
-export default Dashboard
+function mapStateToProps(state){
+    return {auth: state.auth}
+  }
+
+export default connect(mapStateToProps)(Dashboard)

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Form, Grid, Label, Icon, Modal, Button } from 'semantic-ui-react';
+import moment from 'moment'
+import { DateRangePicker } from 'react-dates'
+import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/initialize';
 
 export default class Setupseven extends Component {
   constructor(props) {
@@ -8,7 +12,10 @@ export default class Setupseven extends Component {
       active11: false,
       active12: false,
       active13: false,
-      active14: false
+      active14: false,
+      startDate: moment(),
+      endDate: moment(),
+      focusedInput: false
     }
     this.handleClick11 = this.handleClick11.bind(this)
     this.handleClick12 = this.handleClick12.bind(this)
@@ -39,6 +46,19 @@ export default class Setupseven extends Component {
               <Button name={this.state.active13 === true ? 'anytime' : ''} toggle active={this.state.active13} onClick={this.handleClick13} className="btn-hover mr-02" basic color="blue">Anytime</Button>
               <Button name={this.state.active14 === true ? 'daytime' : ''} toggle active={this.state.active14} onClick={this.handleClick14} className="btn-hover mr-02" basic color="blue">Daytime</Button>
             </Button.Group>
+          </Form.Group>
+
+          <p className="text-center bolder">Show your future employer the date that you are available</p>
+          <Form.Group style={{ display: 'flex', justifyContent: 'center' }}>
+            <DateRangePicker
+              startDate={this.state.startDate}
+              startDateId="your_unique_start_date_id"
+              endDate={this.state.endDate}
+              endDateId="your_unique_end_date_id"
+              onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+              focusedInput={this.state.focusedInput}
+              onFocusChange={focusedInput => this.setState({ focusedInput })}
+            />
           </Form.Group>
         </Form>
         <p className="level-steps">7 of 10</p>

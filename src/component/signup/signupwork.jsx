@@ -58,7 +58,7 @@ class Signupwork extends Component {
                 localStorage.setItem("reptoken", res.data.token);
                 localStorage.setItem("email", data.email);
                 setAuthorizationToken(res.data.token);
-                window.location.assign(`/confirm`)
+                window.location.assign(`/dashboard`)
             }
         }else  {
                 this.setState({  error: res.data.error ,isLoading:false});
@@ -92,7 +92,7 @@ class Signupwork extends Component {
                     <Responsive minWidth={968}>
                       <Image style={{ width: '5rem', height: '5rem' }} src="/images/Reptability123.png"/>
                     </Responsive>
-                    <h2>
+                    <h2 style={{ marginTop: '1rem' }}>
                       Sign Up to work
                     </h2>
                     <Fblogin loading={this.loading}/>
@@ -126,16 +126,20 @@ class Signupwork extends Component {
                         }
                       </Input>
                       </Form.Field>
-                      <Form.Field className="fielder">
+                      <Form.Field style={{ marginTop: '-0.5rem', marginBottom: '-0.5rem' }} className="fielder">
                         {/* <Checkbox label='Remember Me' /> */}
-                        <Link to="/signup/employer">Signup to employ instead</Link>
+                        <Link style={{ textAlign: 'center', width: '100%' }} to="/signup/employer">Signup to employ instead</Link>
                       </Form.Field>
                       <Form.Field>
                           {this.state.error&&this.state.error}
                       </Form.Field>
                       <Button type="submit" color="black" size="huge" style={{ marginTop: '0.3rem', width: '100%' }}>Sign Up</Button>
                     </Form>
+                    <div style={{ marginTop: '0.5rem' }}>
+                      <p>By signing in you agree to our<Link to="/privacy"> terms and services</Link></p>
+                    </div>
                     <div className="link-to-other">
+                      
                       <Link to="/signin">Already a member?</Link>
                     </div>
                   </Card.Content>

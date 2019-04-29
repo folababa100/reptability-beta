@@ -48,7 +48,7 @@ import "./homepage.scss"
                                     <Grid className="j-center">
                                         <div className="flex-box">
                                             <span className="txt-home">Employers</span>
-                                            <Link to="/signup/employer">
+                                            <Link to="/signup/employers">
                                                 <Button primary className="btn-home" size="huge">Looking to hire?</Button>
                                             </Link>
                                         </div>

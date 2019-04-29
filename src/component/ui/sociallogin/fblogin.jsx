@@ -30,7 +30,7 @@ export default class Fblogin extends Component {
                 localStorage.setItem("reptoken", res.data.token);
                 localStorage.setItem("email", data.email);
                 setAuthorizationToken(res.data.token);
-                window.location.assign(`/confirm`)
+                window.location.assign(`/dashboard`)
             }
         }
         })

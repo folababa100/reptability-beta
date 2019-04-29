@@ -127,3 +127,15 @@
     margin-top: 2rem;
     font-weight: 700;
 }
+
+.postal-code {
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #5495f6;
+    cursor: pointer;
+}
+
+.postal-code:hover {
+    color: lighten($color: #5495f6, $amount: 10%)
+}

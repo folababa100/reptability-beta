@@ -59,8 +59,9 @@ class Setupfour extends Component {
       // </Form.Group>
       <div>
         <Form style={{ backgroundColor: 'white' }}>
-          <Form.Group>
+          <Form.Group style={{ display: 'flex', flexDirection: 'column' }}>
             <Form.Input onChange={this.typing} label="Postal Code" type="Number" />
+            <span className="postal-code">Use your postal code to confirm full address</span>
           </Form.Group>
           <div className="flexbox">
             <p style={{ fontWeight: '600', color: '#555' }}>How far are you willing to travel</p>
